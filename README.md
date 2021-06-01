@@ -3,39 +3,9 @@ TIL_2021.md
 
 Props and State are the two types of data that control a component.
 
+Props
 - The simple rule of thumb is props should not be changed. In the programming world we call it “Immutable” or in simple english “Unchangeable”.
 Components receive props from their parent. These props should not be modified inside the component. In React and React Native the data flows in one direction -> From the parent to the child.
-
-// Parent 
-export default class ScreenOne extends React.Component {
-  render () {
-    return (
-     <View>
-     	 <Heading message={'Custom Heading for Screen One'}/>
-     </View>
-    )
-  }
-}
-
-// Child component
-export default class Heading extends React.Component {
-  render () {
-    return (
-      <View>
-        <Text>{this.props.message}</Text>
-      </View>
-    )
-  }
-}
-Heading.propTypes = {
-  message: PropTypes.string
-}
-Heading.defaultProps = {
-  message: 'Heading One'
-}
-
-In the example above we have a Heading component, with a message prop. The parent class ScreenOne sends the prop to the child component Heading.
-Notice that the same component Heading can be reused several times with different message prop values passed to it from different parents components. The key here is to remember that the prop should not be modified inside the Heading component.
 
 State
 - State works differently when compared to props. State is internal to a component, while props are passed to a component.
