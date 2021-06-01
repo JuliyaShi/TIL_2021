@@ -37,7 +37,7 @@ Heading.defaultProps = {
 In the example above we have a Heading component, with a message prop. The parent class ScreenOne sends the prop to the child component Heading.
 Notice that the same component Heading can be reused several times with different message prop values passed to it from different parents components. The key here is to remember that the prop should not be modified inside the Heading component.
 
-##State
+State
 - State works differently when compared to props. State is internal to a component, while props are passed to a component.
 - State can Change — Mutable
 
@@ -46,6 +46,6 @@ Keep in mind not to update state directly using this.state. Always use setState 
 State is internal to a component, while props are passed to a component. In english the 'state of a being' refers to the physical condition of a person, and it is a mere state, which changes over time. Well, similarly state in React/React Native is used within components to keep track of information.
 (https://codeburst.io/props-and-state-in-react-native-explained-in-simple-english-8ea73b1d224e)
 
-##Separate Hooks for Separate Effects
+Separate Hooks for Separate Effects
 
 When multiple values are closely related and change at the same time, it can make sense to group these values in a collection like an object or array. Packaging data together can also add complexity to the code responsible for managing that data. Therefore, it is a good idea to separate concerns by managing different data with different Hooks.
